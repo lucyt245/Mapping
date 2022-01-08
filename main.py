@@ -1,16 +1,12 @@
 import folium
->>> map = folium.Map
->>> map = folium.Map(location = [51.5, -0.13])
->>> map.save('firstMap.html')
->>> map = folium.Map(location = [51.5, -0.13], zoom_start = 4)
->>> map.save('firstMap.html')
->>> map = folium.Map(location = [51.5, -0.13], zoom_start = 5)
->>> map.save('firstMap.html')
->>> map = folium.Map(location = [54, -4.4], zoom_start = 6)
->>> map.save('firstMap.html')
->>> map = folium.Map(location = [56. -4-4], zoom_start = 6)
->>> map.save('firstMap.html')
->>> map = folium.Map(location = [56, -4.4], zoom_start = 6)
->>> map.save('firstMap.html')
->>> map = folium.Map(location = [55, -4.4], zoom_start = 6)
->>> map.save('firstMap.html')
+
+map = folium.Map(location = [55, -4.4], zoom_start = 6, tiles = 'Stamen Terrain')
+
+fg = folium.FeatureGroup(name = 'MyMap')
+
+for coordinates in [[31, 5],[50, 10]]:
+    fg.add_child(folium.Marker(location = coordinates, popup = 'marker', icon = folium.Icon(color = 'purple')))
+
+map.add_child(fg)
+
+map.save('firstMap.html')
