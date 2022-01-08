@@ -2,6 +2,7 @@ import folium
 import pandas
 
 map = folium.Map(location = [55, -4.4], zoom_start = 6, tiles = 'Stamen Terrain')
+# sets starting centre + zoom for map - 'Stameri Terrain' sets the style
 data = pandas.read_csv('volcano.csv')
 
 fg_volc = folium.FeatureGroup(name = 'Volcano')
@@ -12,6 +13,7 @@ lon = list(data['Longitude'])
 location = list(data['Country'])
 volc_name = list(data['V_Name'])
 risk = list(data['risk'])
+# converts the data from 'volcanoes.csv' to lists
 
 for lt, ln, nm, loc, rsk in zip(lat, lon, volc_name, location, risk):
     # places markers on volcano locations worldwide
