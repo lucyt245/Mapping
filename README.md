@@ -1,5 +1,5 @@
 # Mapping
 
 Creates an interactive web map.
-From https://www.udemy.com/course/the-python-mega-course/ with some modifications.
-Created with Atom
+Built off the foundations of https://www.udemy.com/course/the-python-mega-course/.
+Created with Atom.
